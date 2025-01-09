@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-                $products = Product::with(['size', 'color'])->get();
+        $products = Product::with(['size', 'color'])->get();
         return view('settings.product.index', compact('products'));
     }
 
